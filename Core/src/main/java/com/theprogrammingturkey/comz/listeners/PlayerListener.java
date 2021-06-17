@@ -120,8 +120,8 @@ public class PlayerListener implements Listener
 							float x = (float) (Math.random() * 2);
 							float y = (float) (Math.random() * 2);
 							float z = (float) (Math.random() * 2);
-							COMZombies.nmsUtil.sendParticleToPlayer(NMSParticleType.LAVA, pl, player.getLocation(), x, y, z, 1, 1);
-							COMZombies.nmsUtil.sendParticleToPlayer(NMSParticleType.FIREWORK, pl, player.getLocation(), x, y, z, 1, 1);
+							COMZombies.util.sendParticleToPlayer(NMSParticleType.LAVA, pl, player.getLocation(), x, y, z, 1, 1);
+							COMZombies.util.sendParticleToPlayer(NMSParticleType.FIREWORK, pl, player.getLocation(), x, y, z, 1, 1);
 						}
 					}
 

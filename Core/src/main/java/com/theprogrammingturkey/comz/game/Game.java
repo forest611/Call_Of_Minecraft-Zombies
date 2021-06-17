@@ -1305,7 +1305,7 @@ public class Game
 	{
 		for(Block block : blocks)
 			for(Player player : getPlayersAndSpectators())
-				COMZombies.nmsUtil.playBlockBreakAction(player, damage, block);
+				COMZombies.util.playBlockBreakAction(player, damage, block);
 	}
 
 	public boolean isPlayerPlaying(Player player)

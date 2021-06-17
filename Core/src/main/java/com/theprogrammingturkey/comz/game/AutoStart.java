@@ -107,7 +107,7 @@ public class AutoStart
 				}
 
 				for(Player player : game.players)
-					COMZombies.nmsUtil.sendActionBarMessage(player, ChatColor.RED + "Starting In: " + remain);
+					COMZombies.util.sendActionBarMessage(player, ChatColor.RED + "Starting In: " + remain);
 
 				game.signManager.updateGame();
 				COMZombies.scheduleTask(20, this);

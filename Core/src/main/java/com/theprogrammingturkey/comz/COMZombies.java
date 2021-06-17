@@ -9,13 +9,8 @@ import com.theprogrammingturkey.comz.game.actions.BaseAction;
 import com.theprogrammingturkey.comz.game.managers.WeaponManager;
 import com.theprogrammingturkey.comz.kits.KitManager;
 import com.theprogrammingturkey.comz.listeners.*;
-import com.theprogrammingturkey.comz.support.support_1_14_R1.NMSUtil_1_14_R1;
-import com.theprogrammingturkey.comz.support.support_1_15_R1.NMSUtil_1_15_R1;
-import com.theprogrammingturkey.comz.support.support_1_16_R1.NMSUtil_1_16_R1;
-import com.theprogrammingturkey.comz.support.support_1_16_R2.NMSUtil_1_16_R2;
-import com.theprogrammingturkey.comz.support.support_1_16_R3.NMSUtil_1_16_R3;
-import com.theprogrammingturkey.comz.support.support_1_16_R3.NMSUtil_1_17_R1;
 import com.theprogrammingturkey.comz.util.PlaceholderHook;
+import com.theprogrammingturkey.comz.util.Util;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Sign;
@@ -67,13 +62,13 @@ public class COMZombies extends JavaPlugin
 	public static final String CONSOLE_PREFIX = "[COM_Zombies] ";
 	public static final String PREFIX = ChatColor.RED + "[ " + ChatColor.GOLD + ChatColor.ITALIC + "CoM: Zombies" + ChatColor.RED + " ]" + ChatColor.GRAY + " ";
 
-	public static INMSUtil nmsUtil;
+	public static Util util;
 
 	public Vault vault;
 
 	public void onEnable()
 	{
-		loadVersionSpecificCode();
+//		loadVersionSpecificCode();
 		reloadConfig();
 		ConfigManager.loadFiles();
 		WeaponManager.loadGuns();
@@ -96,44 +91,44 @@ public class COMZombies extends JavaPlugin
 		GameManager.INSTANCE.loadAllGames();
 	}
 
-	private void loadVersionSpecificCode()
-	{
-		String version = getMinecraftVersion();
-		if(version == null)
-			throw new IllegalStateException("Sorry, COM:Z Does not current support server version" + Bukkit.getVersion());
-		switch(version)
-		{
-			case "1.14":
-			case "1.14.1":
-			case "1.14.2":
-			case "1.14.3":
-			case "1.14.4":
-				nmsUtil = new NMSUtil_1_14_R1();
-				break;
-			case "1.15":
-			case "1.15.1":
-			case "1.15.2":
-				nmsUtil = new NMSUtil_1_15_R1();
-				break;
-			case "1.16":
-			case "1.16.1":
-				nmsUtil = new NMSUtil_1_16_R1();
-				break;
-			case "1.16.2":
-			case "1.16.3":
-				nmsUtil = new NMSUtil_1_16_R2();
-				break;
-			case "1.16.4":
-			case "1.16.5":
-				nmsUtil = new NMSUtil_1_16_R3();
-				break;
-			case "1.17":
-				nmsUtil = new NMSUtil_1_17_R1();
-				break;
-			default:
-				throw new IllegalStateException("Sorry, COM:Z Does not current support server version" + version);
-		}
-	}
+//	private void loadVersionSpecificCode()
+//	{
+//		String version = getMinecraftVersion();
+//		if(version == null)
+//			throw new IllegalStateException("Sorry, COM:Z Does not current support server version" + Bukkit.getVersion());
+//		switch(version)
+//		{
+//			case "1.14":
+//			case "1.14.1":
+//			case "1.14.2":
+//			case "1.14.3":
+//			case "1.14.4":
+//				nmsUtil = new NMSUtil_1_14_R1();
+//				break;
+//			case "1.15":
+//			case "1.15.1":
+//			case "1.15.2":
+//				nmsUtil = new NMSUtil_1_15_R1();
+//				break;
+//			case "1.16":
+//			case "1.16.1":
+//				nmsUtil = new NMSUtil_1_16_R1();
+//				break;
+//			case "1.16.2":
+//			case "1.16.3":
+//				nmsUtil = new NMSUtil_1_16_R2();
+//				break;
+//			case "1.16.4":
+//			case "1.16.5":
+//				nmsUtil = new NMSUtil_1_16_R3();
+//				break;
+//			case "1.17":
+//				nmsUtil = new NMSUtil_1_17_R1();
+//				break;
+//			default:
+//				throw new IllegalStateException("Sorry, COM:Z Does not current support server version" + version);
+//		}
+//	}
 
 	/**
 	 * Registers every event in the event package

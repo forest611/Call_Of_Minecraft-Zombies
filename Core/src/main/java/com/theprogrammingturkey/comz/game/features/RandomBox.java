@@ -87,7 +87,7 @@ public class RandomBox
 		openedBy = player;
 
 		if(chestLocation != null)
-			COMZombies.nmsUtil.playChestAction(chestLocation, true);
+			COMZombies.util.playChestAction(chestLocation, true);
 
 		running = true;
 		weapon = WeaponManager.getRandomWeapon(false, boxGame.getPlayersWeapons(player));
@@ -202,7 +202,7 @@ public class RandomBox
 		if(namePlate != null)
 			namePlate.remove();
 		if(chestLocation != null)
-			COMZombies.nmsUtil.playChestAction(chestLocation, false);
+			COMZombies.util.playChestAction(chestLocation, false);
 		Integer id = RandomBox.boxes.remove(RandomBox.this);
 		if(id != null)
 			Bukkit.getScheduler().cancelTask(id);

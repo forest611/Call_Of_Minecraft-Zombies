@@ -125,7 +125,7 @@ public class WeaponListener implements Listener
 											float x = (float) (Math.random());
 											float y = (float) (Math.random());
 											float z = (float) (Math.random());
-											COMZombies.nmsUtil.sendParticleToPlayer(NMSParticleType.HEART, player, mob.getLocation(), x, y, z, 1, 1);
+											COMZombies.util.sendParticleToPlayer(NMSParticleType.HEART, player, mob.getLocation(), x, y, z, 1, 1);
 										}
 									}
 									for(Player pl : game.players)

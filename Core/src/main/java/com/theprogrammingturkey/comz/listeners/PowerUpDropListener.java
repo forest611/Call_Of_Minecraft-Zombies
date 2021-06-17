@@ -127,7 +127,7 @@ public class PowerUpDropListener implements Listener
 		if(!GameManager.INSTANCE.isPlayerInGame(player))
 			return;
 
-		COMZombies.nmsUtil.sendActionBarMessage(player, ChatColor.RED + powerUp.getDisplay() + ": " + (duration / 20));
+		COMZombies.util.sendActionBarMessage(player, ChatColor.RED + powerUp.getDisplay() + ": " + (duration / 20));
 		COMZombies.scheduleTask(20, () ->
 		{
 			if(duration - 20 > 0)
